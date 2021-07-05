@@ -1,0 +1,56 @@
+.card {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  box-shadow: 1px 5px 10px 0 #3a3a3a25;
+  border-radius: 0.2rem;
+  padding: 1rem;
+}
+
+.card .contTitulo {
+  /* background: #8a0404; */
+  border-left: 3px solid var(--primario);
+  padding: 0 0.5rem;
+}
+
+.card .contTitulo .titulo {
+  color: var(--primario);
+  font-size: 0.9rem;
+}
+
+.card .contTitulo .subTitulo {
+  color: var(--secundario);
+  font-size: 1.1rem;
+}
+
+.card .contTabla {
+  /* background: #f55f5f; */
+  width: 100%;
+  height: 83%;
+  padding-top: 1.5rem;
+}
+
+.card .contTabla .tabla {
+  /* background: #f55f5f; */
+  width: 100%;
+  height: 100%;
+}
+
+.card .contTabla .tabla .tablaPos {
+  position: sticky;
+  /* background: #fff; */
+  left: 0px;
+	white-space: nowrap;
+}
+
+.card .contTabla .tabla .tablaCenter {
+	text-align: center;
+}
+
+.card .contTabla .tabla .tablaLeft {
+	text-align: left;
+}

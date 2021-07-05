@@ -1,0 +1,164 @@
+.contScore {
+  width: 100%;
+  height: 35vh;
+  background: var(--secundario);
+	display: flex;
+	justify-content: center;
+}
+
+.score {
+	width: 85%;
+	height: 100%;
+  /* background: var(--cuarto); */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas: "teamLocal gol teamVisita";
+}
+
+.score .teamLocal {
+  grid-area: teamLocal;
+  /* background: #c41515; */
+}
+
+.score .gol {
+  grid-area: gol;
+  /* background: #09a0bb; */
+}
+
+.score .teamVisita {
+  grid-area: teamVisita;
+  /* background: #69026d; */
+}
+
+.contTeam {
+  width: 100%;
+  height: 100%;
+  /* background: #86eee5; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.visita {
+  flex-direction: row-reverse;
+}
+
+.contTeam .contLogo {
+  /* background: #000; */
+  width: 25%;
+  height: 45%;
+}
+
+.contTeam .borderRight {
+  border-right: 1px solid var(--terciario);
+  margin-right: 1rem;
+}
+
+.contTeam .borderLeft {
+  border-left: 1px solid var(--terciario);
+  margin-left: 1rem;
+}
+
+.contTeam .contLogo .teamLogo {
+  width: 100%;
+  height: 100%;
+}
+
+.contTeam .contName {
+  /* background: #d30505; */
+  width: 70%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contTeam .contName .txtName {
+  color: var(--primario);
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.contTeam .contName .desc {
+  color: var(--cuarto);
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.visita .txtName,
+.visita .desc {
+  text-align: right;
+}
+
+.contInfo {
+  /* background: #9cd3f8; */
+  width: 100%;
+  height: 100%;
+}
+
+.contInfo .infoPartido {
+  /* background: #014674; */
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contInfo .infoPartido .statusPartido,
+.contInfo .infoPartido .nameLiga {
+  color: var(--primario);
+  font-size: 0.8rem;
+}
+
+.contInfo .contGoal {
+  /* background: #000; */
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	flex-direction: column;
+}
+
+.contInfo .contGoal .infoGoles {
+  /* background: #013517; */
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contInfo .contGoal .infoGoles .dataGol {
+  color: var(--terciario);
+  font-size: 2rem;
+}
+
+.contInfo .contGoal .contButton {
+  /* background: #ce1515; */
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contInfo .contGoal .contButton .btnShowMin {
+  width: 7rem;
+  height: 2rem;
+  background: transparent;
+  border: 1px solid var(--primario);
+	border-radius: 2rem;
+  color: var(--primario);
+	font-size: .7rem;
+	transition: all .5s ease;
+	cursor: pointer;
+}
+
+.contInfo .contGoal .contButton .btnShowMin:hover {
+	background: var(--primario);
+  color: var(--secundario);
+}

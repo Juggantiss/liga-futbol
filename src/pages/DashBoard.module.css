@@ -1,0 +1,52 @@
+.container {
+  background: #fff;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+	padding: 3rem 0;
+}
+
+.contInfo {
+  background: #ffffff;
+  width: 85%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas: "contTorneo contTorneo contNoticias";
+  grid-gap: 1rem;
+}
+
+.contInfo .contTorneo {
+  /* background: #790303; */
+  grid-area: contTorneo;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "contGoleador contTabla"
+    "contDefensa contTabla";
+  grid-gap: 1rem;
+}
+
+.contInfo .contTorneo .contGoleador {
+	/* background: #058630; */
+	grid-area: contGoleador;
+	/* padding: 2rem; */
+}
+
+.contInfo .contTorneo .contDefensa {
+	/* background: #eba236; */
+	grid-area: contDefensa;
+}
+
+.contInfo .contTorneo .contTabla {
+	/* background: #fcadf1; */
+	grid-area: contTabla;
+}
+
+.contInfo .contNoticias {
+  /* background: #0724a8; */
+  grid-area: contNoticias;
+}

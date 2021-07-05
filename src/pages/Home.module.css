@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+:root {
+  --primario: #05d19e;
+  --secundario: #020411;
+  --terciario: #ffffff;
+  --cuarto: #868686;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Tamaño del scroll */
+body::-webkit-scrollbar {
+  width: 0.5rem;
+  background: var(--terciario);
+}
+
+/* Estilos barra (thumb) de scroll */
+body::-webkit-scrollbar-thumb {
+  background: var(--secundario);
+  /* border-radius: 0.6rem; */
+}
+
+body::-webkit-scrollbar-thumb:active {
+  background-color: var(--secundario);
+}
+
+.contInformation {
+  width: 100%;
+  height: 65vh;
+  /* background: #020411; */
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.nota {
+  /* background: #01244b; */
+  width: 60%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.titulo {
+  color: var(--primario);
+  font-size: 1.5rem;
+}
+
+.descripcion {
+  color: var(--secundario);
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.txtNota {
+  color: var(--cuarto);
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-align: justify;
+}
+
+.imgNota {
+  /* background: #f11616; */
+  width: 40%;
+  height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.imgNota .imageNote {
+  width: 80%;
+  height: 80%;
+}
