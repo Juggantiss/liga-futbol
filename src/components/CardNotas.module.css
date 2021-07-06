@@ -29,12 +29,16 @@
 	height: 35%;
 	position: absolute;
 	bottom: 0;
-	padding: 1rem;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 5%;
+	border-top: 4px solid var(--primario);
 }
 
 .card .contNotas .contTitulos .titulo {
 	color: var(--primario);
-	font-size: 1.2rem;
+	font-size: 1rem;
 	font-weight: normal;
 	margin-bottom: .2rem;
 }

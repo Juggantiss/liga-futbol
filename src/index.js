@@ -2,18 +2,19 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./assets/css/index.css";
 import App from "./pages/App";
-import ApolloClient from "apollo-boost";
-import { ApolloProvider } from "@apollo/react-hooks";
 
-const client = new ApolloClient({
-  uri: "http://localhost:4000/api",
-});
+// import ApolloClient from "apollo-boost";
+// import { ApolloProvider } from "@apollo/react-hooks";
+
+// const client = new ApolloClient({
+//   uri: "http://localhost:4000/api",
+// });
 
 ReactDOM.render(
   <React.StrictMode>
-    <ApolloProvider client={client}>
+    {/* <ApolloProvider client={client}> */}
       <App />
-    </ApolloProvider>
+    {/* </ApolloProvider> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
