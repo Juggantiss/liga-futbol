@@ -11,6 +11,10 @@ function ScoreBoard() {
     <>
       <div className={style.contScore}>
         <div className={style.score}>
+          <div className={style.infoPartido}>
+            <p className={style.nameLiga}>Unidad deportiva 'Che Gomez'</p>
+            <p className={style.statusPartido}>En curso</p>
+          </div>
           <div className={style.teamLocal}>
             <div className={style.contTeam}>
               <div className={classnames(style.contLogo, style.borderRight)}>
@@ -23,25 +27,9 @@ function ScoreBoard() {
             </div>
           </div>
           <div className={style.gol}>
-            <div className={style.contInfo}>
-              <div className={style.infoPartido}>
-                <p className={style.nameLiga}>Unidad deportiva 'Che Gomez'</p>
-                <p className={style.statusPartido}>En curso</p>
-              </div>
-              <div className={style.contGoal}>
-                <div className={style.infoGoles}>
-                  <p className={style.dataGol}>0</p>
-                  <p className={style.dataGol}>VS</p>
-                  <p className={style.dataGol}>0</p>
-                </div>
-                <div className={style.contButton}>
-                  <button className={style.btnShowMin}>Seguir partido</button>
-                </div>
-              </div>
-              {/* <div className={style.contButton}>
-                <button className={style.btnShowMin}>Seguir partido</button>
-              	</div> */}
-            </div>
+            <p className={style.dataGol}>0</p>
+            <p className={classnames(style.dataGol, style.noText)}>VS</p>
+            <p className={style.dataGol}>0</p>
           </div>
           <div className={style.teamVisita}>
             <div className={classnames(style.contTeam, style.visita)}>
@@ -53,6 +41,9 @@ function ScoreBoard() {
                 <p className={style.desc}>Equipo visitante</p>
               </div>
             </div>
+          </div>
+          <div className={style.contButton}>
+            <button className={style.btnShowMin}>Seguir partido</button>
           </div>
         </div>
       </div>

@@ -1,18 +1,27 @@
 .card {
-  background: #fff;
+  background: var(--secundario);
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   /* align-items: center; */
   flex-direction: column;
-  box-shadow: 1px 5px 10px 0 #3a3a3a25;
-  border-radius: 0.2rem;
+  box-shadow: 1px 5px 10px 0 #2929298a;
+  border-radius: 0.4rem;
   padding: 1rem;
+  cursor: pointer;
 }
 
-.card .contTitulo {
-  /* background: #8a0404; */
+.card .cardHeader {
+  /* background: #e71717; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.card .cardHeader .contTitulo {
+  /* background: #048a78; */
   border-left: 3px solid var(--primario);
   padding: 0 0.5rem;
 }
@@ -23,8 +32,24 @@
 }
 
 .card .contTitulo .subTitulo {
-  color: var(--secundario);
+  color: var(--terciario);
   font-size: 1.1rem;
+}
+
+.card .cardHeader .btnTabla {
+  background: transparent;
+  width: 2.1rem;
+  height: 2.1rem;
+  color: var(--primario);
+  border: 1px solid var(--primario);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+
+.card .cardHeader .btnTabla:hover {
+  background: var(--primario);
+  color: var(--secundario);
 }
 
 .card .contTabla {
@@ -38,6 +63,7 @@
   /* background: #f55f5f; */
   width: 100%;
   height: 100%;
+  color: var(--terciario);
 }
 
 .card .contTabla .tabla .tablaPos {
@@ -53,4 +79,16 @@
 
 .card .contTabla .tabla .tablaLeft {
 	text-align: left;
+}
+
+.card .contTabla .tabla .headerTable {
+  font-size: .8rem;
+  font-weight: normal;
+}
+
+.color {
+  background: var(--primario);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
 }

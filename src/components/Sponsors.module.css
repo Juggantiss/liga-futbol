@@ -1,20 +1,31 @@
 .contSponsors {
   /* background: #000; */
-	width: 100%;
-	height: 40vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contSponsors .contImg {
-	/* background: #03796f; */
-	width: 50%;
-	height: 60%;
+  /* background: #03796f; */
+  width: 50%;
+  height: 60%;
 }
 
 .contSponsors .contImg .imagen {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 858px) {
+	.contSponsors {
+		height: 35vh;
+	}
+	
+	.contSponsors .contImg {
+		width: 85%;
+		height: 60%;
+	}
 }

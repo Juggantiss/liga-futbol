@@ -94,3 +94,41 @@ body::-webkit-scrollbar-thumb:active {
   letter-spacing: 0.5rem;
   text-transform: uppercase;
 }
+
+@media screen and (max-width: 858px) {
+  .txtBanner {
+    align-items: center;
+  }
+
+  .txtBanner .txtTop {
+    font-size: 0.8rem;
+    letter-spacing: 0.25rem;
+  }
+
+  .txtBanner .txtCenter {
+    font-size: 3rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .txtBanner .txtBottom {
+    font-size: 0.8rem;
+    letter-spacing: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .txtBanner .txtTop {
+    font-size: 0.7rem;
+    letter-spacing: 0;
+  }
+
+  .txtBanner .txtCenter {
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+
+  .txtBanner .txtBottom {
+    font-size: 0.7rem;
+    letter-spacing: 0;
+  }
+}

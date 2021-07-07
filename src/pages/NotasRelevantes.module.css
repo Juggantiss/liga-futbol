@@ -26,20 +26,42 @@
     "notasPrincipal notasPrincipal notasTercero";
   grid-gap: 1rem;
   padding: 2rem 0;
-	/* padding-top: 1rem; */
+  /* padding-top: 1rem; */
 }
 
 .contInfo .contNotas .notasPrincipal {
-	grid-area: notasPrincipal;
-	background: #f72828;
+  grid-area: notasPrincipal;
+  /* background: #f72828; */
 }
 
 .contInfo .contNotas .notasSecundario {
-	grid-area: notasSecundario;
-	background: #f72828;
+  grid-area: notasSecundario;
+  /* background: #f72828; */
 }
 
 .contInfo .contNotas .notasTercero {
-	grid-area: notasTercero;
-	background: #f72828;
+  grid-area: notasTercero;
+  /* background: #f72828; */
 }
+
+@media screen and (max-width: 858px) {
+  .container {
+    height: fit-content;
+    padding: 6vh 0;
+  }
+
+  .contInfo .contNotas {
+    height: fit-content;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "notasPrincipal"
+      "notasSecundario"
+      "notasTercero";
+    padding: 1rem 0;
+  }
+}
+
+/* @media screen and (max-width: 720px) {
+
+} */

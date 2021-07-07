@@ -1,7 +1,6 @@
 import React from "react";
 
 import style from "./CardNotas.module.css";
-import nota1 from "../assets/img/banner2.jpg";
 
 function CardNotas({ titulo, subtitulo, imagen }) {
   return (
