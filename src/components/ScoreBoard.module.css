@@ -1,0 +1,232 @@
+.contScore {
+  width: 100%;
+  height: 35vh;
+  background: var(--secundario);
+  display: flex;
+  justify-content: center;
+}
+
+.score {
+  width: 85%;
+  height: 100%;
+  /* background: var(--cuarto); */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "teamLocal infoPartido teamVisita"
+    "teamLocal gol teamVisita"
+    "teamLocal contButton teamVisita";
+}
+
+.score .teamLocal {
+  grid-area: teamLocal;
+  /* background: #c41515; */
+}
+
+.score .gol {
+  grid-area: gol;
+  /* background: #035307; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gol .dataGol {
+  color: var(--terciario);
+  font-size: 2rem;
+}
+
+.score .teamVisita {
+  grid-area: teamVisita;
+  /* background: #69026d; */
+}
+
+.score .infoPartido {
+  grid-area: infoPartido;
+  /* background: #69026d; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score .contButton {
+  grid-area: contButton;
+  /* background: #69026d; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contTeam {
+  width: 100%;
+  height: 100%;
+  /* background: #86eee5; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.visita {
+  flex-direction: row-reverse;
+}
+
+.contTeam .contLogo {
+  /* background: #000; */
+  width: 25%;
+  height: 45%;
+}
+
+.contTeam .borderRight {
+  border-right: 1px solid var(--terciario);
+  margin-right: 1rem;
+}
+
+.contTeam .borderLeft {
+  border-left: 1px solid var(--terciario);
+  margin-left: 1rem;
+}
+
+.contTeam .contLogo .teamLogo {
+  width: 100%;
+  height: 100%;
+}
+
+.contTeam .contName {
+  /* background: #d30505; */
+  width: 70%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contTeam .contName .txtName {
+  color: var(--primario);
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.contTeam .contName .desc {
+  color: var(--cuarto);
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.visita .txtName,
+.visita .desc {
+  text-align: right;
+}
+
+.infoPartido .statusPartido,
+.infoPartido .nameLiga {
+  color: var(--primario);
+  font-size: 0.8rem;
+}
+
+.contButton .btnShowMin {
+  width: 7rem;
+  height: 2rem;
+  background: transparent;
+  border: 1px solid var(--primario);
+  border-radius: 2rem;
+  color: var(--primario);
+  font-size: 0.7rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.contButton .btnShowMin:hover {
+  background: var(--primario);
+  color: var(--secundario);
+}
+
+@media screen and (max-width: 858px) {
+  .contScore {
+    height: fit-content;
+  }
+  .score {
+    /* background: #012d5f; */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "infoPartido infoPartido infoPartido infoPartido"
+      "teamLocal teamLocal teamLocal gol"
+      "teamVisita teamVisita teamVisita gol"
+      "contButton contButton contButton contButton";
+  }
+
+  .visita {
+    flex-direction: row;
+  }
+
+  .contTeam {
+    justify-content: flex-start;
+  }
+
+  /* .contTeam .contLogo {
+    width: 5%;
+    height: 10%;
+    background: #d31a1a;
+    border: 1px solid #ffffff;
+  } */
+
+  .contTeam .borderRight {
+    border-right: none;
+    margin-right: 0.5rem;
+  }
+
+  .contTeam .borderLeft {
+    border-left: none;
+    margin-right: 0.5rem;
+    margin-left: 0;
+  }
+
+  .contTeam .contName {
+    width: calc(90% - 0.5rem);
+    /* height: 100%; */
+  }
+
+  .contTeam .contName .txtName {
+    font-size: 1rem;
+  }
+
+  .contTeam .contName .desc {
+    font-size: 0.8rem;
+  }
+
+  .visita .txtName,
+  .visita .desc {
+    text-align: left;
+  }
+
+  /* --------- Marcador ----------- */
+  .score .gol {
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .gol .dataGol {
+    font-size: 1.4rem;
+  }
+
+  .gol .noText {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .contTeam .contLogo {
+    width: 25%;
+    height: 100%;
+    /* background: #84f01f; */
+  }
+
+  .contTeam .contName {
+    width: calc(75% - 0.5rem);
+    height: 100%;
+    /* background: #1fe2f0; */
+  }
+}

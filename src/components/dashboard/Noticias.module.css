@@ -1,0 +1,36 @@
+.card {
+  /* background: #f51414; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  /* box-shadow: 1px 5px 10px 0 #3a3a3a25;
+    border-radius: 0.2rem; */
+  /* padding: 1rem; */
+}
+
+.card .contNotas {
+  /* background: #f55f5f; */
+  width: 100%;
+  height: 100%;
+  /* padding-top: 1.5rem; */
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+	grid-template-areas: 
+		"notaUno"
+		"notaDos";
+	grid-gap: 1rem;
+}
+
+.card .contNotas .notaUno {
+	grid-area: notaUno;
+	/* background: #b81515; */
+}
+
+.card .contNotas .notaDos {
+	grid-area: notaDos;
+	/* background: #0f6385; */
+}

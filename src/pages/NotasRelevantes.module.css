@@ -1,0 +1,67 @@
+.container {
+  /* background: #c22e2e; */
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12vh 0;
+}
+
+.contInfo {
+  /* background: #013057; */
+  width: 85%;
+  height: 100%;
+}
+
+.contInfo .contNotas {
+  /* background: #000; */
+  width: 100%;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "notasPrincipal notasPrincipal notasSecundario"
+    "notasPrincipal notasPrincipal notasTercero";
+  grid-gap: 1rem;
+  padding: 2rem 0;
+  /* padding-top: 1rem; */
+}
+
+.contInfo .contNotas .notasPrincipal {
+  grid-area: notasPrincipal;
+  /* background: #f72828; */
+}
+
+.contInfo .contNotas .notasSecundario {
+  grid-area: notasSecundario;
+  /* background: #f72828; */
+}
+
+.contInfo .contNotas .notasTercero {
+  grid-area: notasTercero;
+  /* background: #f72828; */
+}
+
+@media screen and (max-width: 858px) {
+  .container {
+    height: fit-content;
+    padding: 6vh 0;
+  }
+
+  .contInfo .contNotas {
+    height: fit-content;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "notasPrincipal"
+      "notasSecundario"
+      "notasTercero";
+    padding: 1rem 0;
+  }
+}
+
+/* @media screen and (max-width: 720px) {
+
+} */
