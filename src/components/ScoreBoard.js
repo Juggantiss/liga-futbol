@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import style from "./ScoreBoard.module.css";
 import classnames from "classnames";
@@ -7,6 +7,19 @@ import imgLocal from "../assets/img/local.png";
 import imgVisita from "../assets/img/visitante.png";
 
 function ScoreBoard() {
+  const [score, setScore] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = async () => {
+    const url = "https://liga-che-gomez-api.herokuapp.com/api/soccer-matchs/";
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => setScore(data));
+  };
+
   return (
     <>
       <div className={style.contScore}>
@@ -21,15 +34,17 @@ function ScoreBoard() {
                 <img className={style.teamLogo} src={imgLocal} alt="" />
               </div>
               <div className={style.contName}>
-                <h1 className={style.txtName}>Real Nazareno</h1>
+                <h1 className={style.txtName}>
+                  {score.data ? score.data[0].team.name : null}
+                </h1>
                 <p className={style.desc}>Equipo local</p>
               </div>
             </div>
           </div>
           <div className={style.gol}>
-            <p className={style.dataGol}>0</p>
+            <p className={style.dataGol}>{score.data ? score.data[0].goalsScored : null}</p>
             <p className={classnames(style.dataGol, style.noText)}>VS</p>
-            <p className={style.dataGol}>0</p>
+            <p className={style.dataGol}>{score.data ? score.data[0].goalsAgainst : null}</p>
           </div>
           <div className={style.teamVisita}>
             <div className={classnames(style.contTeam, style.visita)}>
@@ -37,7 +52,9 @@ function ScoreBoard() {
                 <img className={style.teamLogo} src={imgVisita} alt="" />
               </div>
               <div className={style.contName}>
-                <h1 className={style.txtName}>JNI</h1>
+                <h1 className={style.txtName}>
+                  {score.data ? score.data[0].rivalTeam.name : null}
+                </h1>
                 <p className={style.desc}>Equipo visitante</p>
               </div>
             </div>
