@@ -2,6 +2,7 @@ import React from "react";
 
 // import ScoreBoard from "../components/ScoreBoard";
 import Header from "../components/Header";
+import Matchs from "../components/Matchs";
 import SectionLigas from "./SectionLigas";
 import NotasRelevantes from "./NotasRelevantes";
 import Sponsors from "../components/Sponsors";
@@ -11,7 +12,7 @@ function Home() {
   return (
     <>
       <Header />
-      {/* <ScoreBoard /> */}
+      <Matchs />
       <SectionLigas />
       <Sponsors />
       <NotasRelevantes />

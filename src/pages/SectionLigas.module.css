@@ -15,7 +15,7 @@
 }
 
 .contInfo .contLigas {
-  /* background: #000; */
+  /* background: #fc1f1f; */
   width: 100%;
   height: 76vh;
   display: grid;
@@ -29,7 +29,7 @@
 }
 
 .contInfo .contLigas .ligaUno {
-  background: #ee1515;
+  /* background: #ee1515; */
   grid-area: ligaUno;
   background-image: linear-gradient(180deg, #011063d3, var(--secundario)),
     url("../assets/img/banner4.jpg");
@@ -40,7 +40,7 @@
 }
 
 .contInfo .contLigas .ligaDos {
-  background: #027464;
+  /* background: #027464; */
   grid-area: ligaDos;
   background-image: linear-gradient(180deg, #011063d3, var(--secundario)),
     url("../assets/img/banner3.jpg");
@@ -51,8 +51,8 @@
 }
 
 .contInfo .contLigas .ligaTres {
-  background: #027464;
-  grid-area: nota;
+  /* background: #027464; */
+  grid-area: ligaTres;
   background-image: linear-gradient(180deg, #011063d3, var(--secundario)),
     url("../assets/img/banner.jpg");
   background-position: center center;

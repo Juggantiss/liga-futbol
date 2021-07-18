@@ -1,0 +1,160 @@
+.container {
+  background: var(--secundario);
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .contCarousel {
+	/* background: #e42020; */
+	width: 85%;
+  height: 100%;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contCard {
+  /* background: #3f0047; */
+	min-width: 100%;
+  height: 30vh;
+  padding: 0 0.5rem;
+}
+
+.card {
+  /* background-image: linear-gradient(180deg, #7eb2ff, #2875627e); */
+  /* background-color: var(--terciario); */
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid var(--primario); */
+  /* border-radius: 1rem; */
+}
+
+.card .cardHeader {
+  background: var(--primario);
+  width: 100%;
+  height: 20%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 1rem;
+}
+
+.card .cardHeader .txtHeader {
+  color: var(--secundario);
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.card .cardMatch {
+  /* background: #fff; */
+  width: 100%;
+  height: 60%;
+  border: 1px solid var(--primario);
+  border-bottom: 0;
+  padding: 0 1rem;
+}
+
+.card .cardMatch .matchData {
+  /* background: #e71c1c; */
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+}
+
+.card .cardMatch .matchData .nameTeam {
+  /* background: #068a22; */
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.card .cardMatch .matchData .scoreTeam {
+  /* background: #f08a4f; */
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.txtMatch {
+  color: var(--terciario);
+  font-size: 0.8rem;
+}
+
+.card .cardFooter {
+  /* background: #fff; */
+  width: 100%;
+  height: 20%;
+  border: 1px solid var(--primario);
+  border-top: 0;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.card .cardFooter .btnMatch {
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  color: var(--primario);
+  font-size: 0.7rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  border: none;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.card .cardFooter .btnMatch:hover {
+  background: var(--primario);
+  color: var(--secundario);
+}
+
+/* ---------------- CONTROLES DEL CAROUSEL ------------------- */
+.contBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnSlider {
+  background: transparent;
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+	color: var(--primario);
+	transition: all 1s ease;
+}
+
+.btnSlider:hover {
+  color: var(--terciario);
+}
+
+.contPaginas .btnPaginas {
+  margin: 0.8rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid var(--terciario);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.contPaginas .activado,
+.contPaginas .btnPaginas:hover {
+  box-shadow: 0 0 1px 3px #05d19e80;
+  background: #05d19e80;
+  border: 2px solid var(--primario);
+}
