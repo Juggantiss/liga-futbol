@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 
 import classnames from "classnames";
 import style from "./Matchs.module.css";
@@ -6,7 +7,24 @@ import Carousel, { consts } from "react-elastic-carousel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
+import { gql, useSubscription } from "@apollo/react-hooks";
+
+const WAITING_FOR_GOAL = gql`
+  subscription {
+    newGoal {
+      _id
+      goalsScored
+      goalsAgainst
+    }
+  }
+`;
+
 function Matchs() {
+  const history = useHistory();
+  const goToLiga = (liga) => {
+    history.push("/" + liga);
+  };
+
   const [match, setMatch] = useState([]);
 
   useEffect(() => {
@@ -22,7 +40,10 @@ function Matchs() {
 
   const CardMatch = ({ local, golLocal, visita, golVisita }) => (
     <>
-      <div className={style.card}>
+      <div
+        className={style.card}
+        onClick={() => goToLiga("Match")}
+      >
         <div className={style.cardHeader}>
           <p className={style.txtHeader}>18/07</p>
           <p className={style.txtHeader}>19:00</p>
@@ -94,6 +115,25 @@ function Matchs() {
       </div>
     );
   };
+
+  const waitingForGoal = useSubscription(WAITING_FOR_GOAL);
+
+  useEffect(() => {
+    if (waitingForGoal.data) {
+      const partidos = [...match.data];
+      const matchIndex = match.data.findIndex(
+        (partido) => partido._id === waitingForGoal.data.newGoal._id
+      );
+      partidos[matchIndex].goalsAgainst =
+        waitingForGoal.data.newGoal.goalsAgainst;
+      partidos[matchIndex].goalsScored =
+        waitingForGoal.data.newGoal.goalsScored;
+
+      setMatch({ ...match, data: partidos });
+    } else {
+      console.log(waitingForGoal);
+    }
+  }, [waitingForGoal.data]);
 
   return (
     <div className={style.container}>

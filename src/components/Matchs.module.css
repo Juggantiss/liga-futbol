@@ -87,6 +87,7 @@
 .txtMatch {
   color: var(--terciario);
   font-size: 0.8rem;
+  text-transform: capitalize;
 }
 
 .card .cardFooter {

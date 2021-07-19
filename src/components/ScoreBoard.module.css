@@ -16,7 +16,7 @@
   grid-template-areas:
     "teamLocal infoPartido teamVisita"
     "teamLocal gol teamVisita"
-    "teamLocal contButton teamVisita";
+    "teamLocal contSponsors teamVisita";
 }
 
 .score .teamLocal {
@@ -50,8 +50,8 @@
   align-items: center;
 }
 
-.score .contButton {
-  grid-area: contButton;
+.score .contSponsors {
+  grid-area: contSponsors;
   /* background: #69026d; */
   display: flex;
   justify-content: center;
@@ -106,6 +106,7 @@
   color: var(--primario);
   font-size: 1.1rem;
   font-weight: normal;
+  text-transform: capitalize;
 }
 
 .contTeam .contName .desc {
@@ -125,21 +126,9 @@
   font-size: 0.8rem;
 }
 
-.contButton .btnShowMin {
-  width: 7rem;
-  height: 2rem;
-  background: transparent;
-  border: 1px solid var(--primario);
-  border-radius: 2rem;
-  color: var(--primario);
-  font-size: 0.7rem;
-  transition: all 0.5s ease;
-  cursor: pointer;
-}
-
-.contButton .btnShowMin:hover {
-  background: var(--primario);
-  color: var(--secundario);
+.contSponsors .txtSponsor {
+  color: var(--terciario);
+  font-size: .8rem;
 }
 
 @media screen and (max-width: 858px) {

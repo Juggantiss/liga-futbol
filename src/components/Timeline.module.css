@@ -1,0 +1,134 @@
+.timeline {
+  width: 100%;
+  height: 100%;
+  /* background: #4460fd; */
+  padding: 2rem;
+}
+
+.item {
+  width: 100%;
+  height: 10vh;
+  /* background: #023b52; */
+  margin-bottom: 2rem;
+}
+
+.local {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas: "itemText itemText itemText itemText itemAction itemTime itemTime itemTime itemTime";
+}
+
+.visita {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas: "itemTime itemTime itemTime itemTime itemAction itemText itemText itemText itemText";
+}
+
+.itemText {
+  /* background: #ad7ef8; */
+  grid-area: itemText;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.itemAction {
+  /* background: #016070; */
+  grid-area: itemAction;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemTime {
+  /* background: #4e0101; */
+  grid-area: itemTime;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.itemLocal {
+  /* background: #e98a8a; */
+  align-items: flex-end;
+}
+
+.itemVisita {
+  /* background: #8ac6e9; */
+  align-items: flex-start;
+}
+
+.txtAction {
+  color: var(--secundario);
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 0.1rem;
+}
+
+.txtTeam {
+  color: var(--cuarto);
+  font-size: 0.7rem;
+  /* text-transform: uppercase; */
+}
+
+.contIcon {
+  background: #fff;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  box-shadow: 0 10px 10px 0 #a3a3a380;
+  padding: 0.7rem;
+}
+
+.contIconGol {
+  background: var(--secundario);
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+}
+
+.txtTime {
+  color: var(--secundario);
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.itemStatus {
+  /* background: #dadada; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemStatus .status {
+  background: var(--primario);
+	width: 7rem;
+	height: 55%;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	border-radius: 2rem;
+}
+
+.itemStatus .status .txtStatus {
+	color: var(--secundario);
+	font-size: .8rem;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 720px) {
+  .local {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "itemText itemAction itemTime";
+  }
+
+  .visita {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "itemTime itemAction itemText";
+  }
+}

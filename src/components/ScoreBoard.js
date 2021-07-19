@@ -42,9 +42,13 @@ function ScoreBoard() {
             </div>
           </div>
           <div className={style.gol}>
-            <p className={style.dataGol}>{score.data ? score.data[0].goalsScored : null}</p>
+            <p className={style.dataGol}>
+              {score.data ? score.data[0].goalsScored : null}
+            </p>
             <p className={classnames(style.dataGol, style.noText)}>VS</p>
-            <p className={style.dataGol}>{score.data ? score.data[0].goalsAgainst : null}</p>
+            <p className={style.dataGol}>
+              {score.data ? score.data[0].goalsAgainst : null}
+            </p>
           </div>
           <div className={style.teamVisita}>
             <div className={classnames(style.contTeam, style.visita)}>
@@ -59,8 +63,8 @@ function ScoreBoard() {
               </div>
             </div>
           </div>
-          <div className={style.contButton}>
-            <button className={style.btnShowMin}>Seguir partido</button>
+          <div className={style.contSponsors}>
+            <p className={style.txtSponsor}>Patrocinado por Cinere</p>
           </div>
         </div>
       </div>

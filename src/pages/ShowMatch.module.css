@@ -1,0 +1,60 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  /* background: #f76868; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  width: 100%;
+  height: fit-content;
+  /* background: #013a1f; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-areas: "contView contTimeline contTimeline contInfo";
+}
+
+.contView {
+  /* background: #614b01; */
+  grid-area: contView;
+}
+
+.contTimeline {
+  background: #070246;
+  grid-area: contTimeline;
+}
+
+.contInfo {
+  background: #4e0101;
+  grid-area: contInfo;
+}
+
+.contSponsor {
+  /* background: #f12a2a; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.sponsor {
+  /* background: #000; */
+  width: 50%;
+  height: 80vh;
+}
+
+@media screen and (max-width: 858px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+			"contTimeline"
+			"contView"
+			"contInfo";
+  }
+}
