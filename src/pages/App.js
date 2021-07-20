@@ -13,7 +13,7 @@ export default function App() {
         <Route exact path="/JovenesConPropositos">
           <LigaCristiana />
         </Route>
-        <Route exact path="/Match">
+        <Route exact path="/Match/:idMatch">
           <ShowMatch />
         </Route>
       </Switch>

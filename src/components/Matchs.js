@@ -21,8 +21,8 @@ const WAITING_FOR_GOAL = gql`
 
 function Matchs() {
   const history = useHistory();
-  const goToLiga = (liga) => {
-    history.push("/" + liga);
+  const goToMatch = (id) => {
+    history.push("/Match/" + id);
   };
 
   const [match, setMatch] = useState([]);
@@ -38,11 +38,11 @@ function Matchs() {
       .then((data) => setMatch(data));
   };
 
-  const CardMatch = ({ local, golLocal, visita, golVisita }) => (
+  const CardMatch = ({ idMatch, local, golLocal, visita, golVisita }) => (
     <>
       <div
         className={style.card}
-        onClick={() => goToLiga("Match")}
+        onClick={() => goToMatch(idMatch)}
       >
         <div className={style.cardHeader}>
           <p className={style.txtHeader}>18/07</p>
@@ -148,6 +148,7 @@ function Matchs() {
               return (
                 <div key={index} className={style.contCard}>
                   <CardMatch
+                    idMatch={team._id}
                     local={team.team.name}
                     golLocal={team.goalsScored}
                     visita={team.rivalTeam.name}

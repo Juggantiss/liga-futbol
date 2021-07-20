@@ -1,5 +1,77 @@
 .footer {
-    width: 100%;
-    height: 40vh;
-    background: var(--secundario);
+  width: 100%;
+  height: 15vh;
+  background: var(--secundario);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 7.5%;
+}
+
+.footer .contLogo {
+  /* background: #ec4e4e; */
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .contLogo .logo {
+  /* background: #ec4e4e; */
+  width: 5rem;
+  height: 5rem;
+}
+
+.footer .contInfo {
+  /* background: #4eccec; */
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .contInfo .txtInfo {
+  color: var(--primario);
+  font-size: 0.8rem;
+  margin: 0 1rem;
+}
+
+.footer .contSocial {
+  /* background: #047a43; */
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .contSocial .icon {
+  color: var(--primario);
+  margin: 0 0.5rem;
+  font-size: 1.7rem;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.footer .contSocial .icon:hover {
+  color: var(--terciario);
+}
+
+@media screen and (max-width: 720px) {
+	.footer {
+		flex-direction: column;
+		height: fit-content;
+		padding: 1rem 0;
+	}
+
+	.footer .contInfo {
+		margin: 1rem 0;
+		justify-content: space-between;
+	}
+
+	.footer .contInfo .txtInfo {
+		margin: 0;
+	}
 }
